@@ -7,3 +7,19 @@ This algorithm is designed to spread party members on planes away from each othe
   Lastly, the seatAssignment method calls on the previously mentioned methods in order to assign the seats to party members. The greedyPlacement is used for assigning the seats and the A* method is used to fix violations that occur. After the dimensions of the plane are assigned then the greedyPlacement method is called for the party member assignment to their seats. After this, check for seats that are violations of the minimum distance requirement between party members. If they are violating then set them up to empty. The A* method is then called in order to find a new seat that will be valid to replace the old invalid seats. If the new seat that is found is valid then it will be assigned. If no new valid seat is found then a warning message is printed. The final seating arrangement is returned at the end of this method.
 
 # Running Instructions
+The language for this algorithm is Python or Python3 since they both will work.
+To run the code, download the Phantom-Airlines.py file. This file can be opened in any IDE that supports Python and run there. I personally created this algorithm in Jupyter Notebook and it ran fine there.
+This file could also be run on command line if you would desire to do so. This can be done with the command, python Phantom-Airlines.py
+
+# Output Example
+I will show an example of output as well as a set of parties used to achieve the output. The entire test case can be viewed in Phantom-Airlines.py
+
+parties = [["A", "B", "C"], ["D", "E", "F"], ["G", "H", "I"], ["J", "K", "L"]]
+Fixing Party 0
+Fixing Party 2
+ P0 |  P2 |  P1 |  .  |  P3 |  P2
+ P3 |  .  |  P0 |  P2 |  .  |  P0
+ .  |  .  |  .  |  .  |  .  |  . 
+ .  |  .  |  .  |  .  |  .  |  . 
+ .  |  .  |  .  |  .  |  .  |  P1
+ P1 |  P3 |  .  |  .  |  .  |  . 
